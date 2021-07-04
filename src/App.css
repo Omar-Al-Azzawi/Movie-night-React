@@ -44,3 +44,9 @@ body {
   align-items: center;
   color: #f64c72;
 }
+.movie_rate {
+  background-color: #2f2fa2;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}

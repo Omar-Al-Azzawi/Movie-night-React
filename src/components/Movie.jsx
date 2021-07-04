@@ -8,7 +8,7 @@ function Movie({ title, poster_path, vote_average, overview}) {
            <img src={IMG_API + poster_path} alt={title} />
            <div className="movie_info">
                <h3>{title}</h3>
-               <span>{vote_average}</span>
+               <span className="movie_rate">{vote_average}</span>
            </div>
            <div className="movie_overview">
            <p>{overview}</p>
