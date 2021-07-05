@@ -5,11 +5,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
-  background-color: #242582;
+  background-color: #101036;
 }
 .movie {
   width: 300px;
-  margin: 0.5rem auto;
+  margin: 2rem auto;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
   border-bottom: 4px solid #99738e;
@@ -49,4 +49,26 @@ body {
   color: #fff;
   padding: 10px;
   border-radius: 10px;
+}
+.header {
+  /* background-image: url(https://s7d2.scene7.com/is/image/TWCNews/movietheater_gettyimages-530640869jpg); */
+  /* background-color: #2426824f; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20vh;
+}
+.header h1 {
+  color: #f64c72;
+  margin: 40px;
+}
+.header_search {
+  width: 20%;
+  padding: 15px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  text-align: center;
+  float: right;
+  margin-right: 30px;
+  transform: translateY(-80px);
 }
