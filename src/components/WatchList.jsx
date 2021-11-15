@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-
 import { useSelector } from "react-redux";
 
 function WatchList() {
@@ -24,7 +23,10 @@ function WatchList() {
         <ul>
           {list.watchList.map((item) => (
             <li key={item.id} style={{ color: "#fff" }}>
-              {item.title}
+              <div>
+                {/*    <img src={item.IMG_API + item.poster_path} alt={item.title} /> */}
+                <h3>{item.title}</h3>
+              </div>
             </li>
           ))}
         </ul>

@@ -32,7 +32,9 @@ function Movies({ id, title, poster_path, vote_average, overview }) {
         <p>{overview}</p>
         <button
           className="movie_btn"
-          onClick={() => dispatch(addToWatchList(title))}
+          onClick={() =>
+            dispatch(addToWatchList({ id, title, poster_path, overview }))
+          }
         >
           Add to watch list
         </button>
