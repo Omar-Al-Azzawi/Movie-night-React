@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import { useSelector } from "react-redux";
 
 function WatchList() {
@@ -8,7 +10,16 @@ function WatchList() {
   return (
     <div>
       {list.watchList.length === 0 ? (
-        <p>You have no items in your watchlist</p>
+        <h2
+          style={{
+            color: "#f64c72",
+            textAlign: "center",
+            marginTop: "80px",
+            letterSpacing: "2px",
+          }}
+        >
+          You have no movies in your watchlist
+        </h2>
       ) : (
         <ul>
           {list.watchList.map((item) => (
@@ -18,6 +29,9 @@ function WatchList() {
           ))}
         </ul>
       )}
+      <Link to="/">
+        <button className="back-btn">Back to Home</button>
+      </Link>
     </div>
   );
 }

@@ -22,7 +22,7 @@ function Movie({ title, poster_path, vote_average, overview }) {
           .map((movie) => (
             <div key={movie.id} className="user_container">
               <img src={IMG_API + poster_path} alt={title} />
-              {title}
+              <h3>{movie.title}</h3>
             </div>
           ))}
     </div>
