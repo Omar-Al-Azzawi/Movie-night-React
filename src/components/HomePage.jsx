@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { useSelector } from "react-redux";
+
 import Movies from "./Movies";
 
 import { GiPopcorn } from "react-icons/gi";
@@ -11,6 +13,8 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${process
 function HomePage() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const watchList = useSelector((state) => state.watch);
 
   useEffect(() => {
     fetch(API)
@@ -60,7 +64,12 @@ function HomePage() {
             />
             <span className="search__icon">
               <Link to="/watch">
-                <h2>Watch list</h2>
+                <h2>
+                  Watch list{" "}
+                  <span className="watch-list-counter">
+                    {watchList.watchList.length}
+                  </span>
+                </h2>
               </Link>
             </span>
           </form>
