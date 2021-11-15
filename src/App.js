@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import HomePage from "./components/HomePage";
-import Movie from "./components/Movie";
+import WatchList from "./components/WatchList.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route exact path="/movie/:id">
-            <Movie />
+          <Route exact path="/watch">
+            <WatchList />
           </Route>
         </Switch>
       </>

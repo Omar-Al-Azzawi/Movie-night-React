@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 import Movies from "./Movies";
+
 import { GiPopcorn } from "react-icons/gi";
-/* import { AiOutlineSearch } from "react-icons/ai"; */
 import { Link } from "react-router-dom";
 
 const API = `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`;
@@ -36,6 +37,7 @@ function HomePage() {
   const handleOnChange = (e) => {
     setSearchTerm(e.target.value);
   };
+
   return (
     <div>
       <header className="header">
@@ -56,7 +58,11 @@ function HomePage() {
               value={searchTerm}
               onChange={handleOnChange}
             />
-            <span className="search__icon"></span>
+            <span className="search__icon">
+              <Link to="/watch">
+                <h2>Watch list</h2>
+              </Link>
+            </span>
           </form>
         </div>
       </header>

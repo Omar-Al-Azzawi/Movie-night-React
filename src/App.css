@@ -20,6 +20,25 @@ body {
 .movie h3 {
   padding: 0 15px;
 }
+h2 {
+  color: salmon;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 40px;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
 
 .movie img {
   width: 100%;
