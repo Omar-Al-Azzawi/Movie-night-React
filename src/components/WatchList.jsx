@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+const IMG_API = "https://image.tmdb.org/t/p/w1280";
+
 function WatchList() {
   const list = useSelector((state) => state.watch);
 
@@ -22,9 +24,13 @@ function WatchList() {
       ) : (
         <ul>
           {list.watchList.map((item) => (
-            <li key={item.id} style={{ color: "#fff" }}>
+            <li key={item.id} style={{ color: "#fff", listStyle: "none" }}>
               <div>
-                {/*    <img src={item.IMG_API + item.poster_path} alt={item.title} /> */}
+                <img
+                  style={{ width: "150px" }}
+                  src={IMG_API + item.poster_path}
+                  alt={item.title}
+                />
                 <h3>{item.title}</h3>
               </div>
             </li>

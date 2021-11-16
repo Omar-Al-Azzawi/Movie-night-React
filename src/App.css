@@ -51,8 +51,8 @@ h2:hover {
   border: 1px solid #f64c72;
 }
 .back-btn {
-  position: absolute;
-  left: 100px;
+  position: fixed;
+  right: 100px;
   bottom: 100px;
   background-color: transparent;
   border: 1px solid #f64c72;
