@@ -27,7 +27,7 @@ function WatchList() {
             <li key={item.id} style={{ color: "#fff", listStyle: "none" }}>
               <div>
                 <img
-                  style={{ width: "150px" }}
+                  style={{ width: "150px", borderRadius: "10px" }}
                   src={IMG_API + item.poster_path}
                   alt={item.title}
                 />
