@@ -38,6 +38,7 @@ function WatchList() {
                     />
                   </div>
                   <div className="overview">
+                    <h3>{item.title}</h3>
                     <p>{item.overview}</p>
                     <button
                       className="remove-btn"
@@ -47,7 +48,6 @@ function WatchList() {
                     </button>
                   </div>
                 </div>
-                <h3>{item.title}</h3>
               </div>
             </li>
           ))}
