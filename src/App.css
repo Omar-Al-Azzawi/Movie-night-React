@@ -20,6 +20,7 @@ body {
 .movie h3 {
   padding: 0 15px;
 }
+
 h2 {
   color: orange;
   font-size: 1.5rem;
@@ -116,7 +117,6 @@ h2:hover {
   cursor: pointer;
   padding: 5px 15px;
   border: 1px solid #f64c72;
-  /* border-radius: 15px; */
   color: #f64c72;
   background-color: transparent;
   transition: all 400ms ease-in-out;
@@ -161,7 +161,7 @@ h2:hover {
 .header_search {
   width: 20%;
   padding: 15px;
-  /* border-radius: 30px; */
+  border-radius: 30px;
   outline: none;
   border: 2px solid #f64c72;
   color: #f64c72;

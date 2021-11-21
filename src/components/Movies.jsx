@@ -16,7 +16,14 @@ const setRateColor = (vote) => {
   }
 };
 
-function Movies({ id, title, poster_path, vote_average, overview }) {
+function Movies({
+  id,
+  title,
+  poster_path,
+  vote_average,
+  overview,
+  release_date,
+}) {
   const dispatch = useDispatch();
 
   return (
@@ -33,7 +40,9 @@ function Movies({ id, title, poster_path, vote_average, overview }) {
         <button
           className="movie_btn"
           onClick={() =>
-            dispatch(addToWatchList({ id, title, poster_path, overview }))
+            dispatch(
+              addToWatchList({ id, title, poster_path, overview, release_date })
+            )
           }
         >
           Add to watch list

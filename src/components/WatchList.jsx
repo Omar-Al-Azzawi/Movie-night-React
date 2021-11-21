@@ -26,8 +26,14 @@ function WatchList() {
         </h2>
       ) : (
         <ul>
+          <h1 style={{ color: "#f64c72", textAlign: "center" }}>
+            Watched list
+          </h1>
           {list.watchList.map((item) => (
-            <li key={item.id} style={{ color: "#fff", listStyle: "none" }}>
+            <li
+              key={item.id}
+              style={{ color: "#fff", listStyle: "none", marginBottom: "25px" }}
+            >
               <div>
                 <div className="list__container">
                   <div>
@@ -40,6 +46,7 @@ function WatchList() {
                   <div className="overview">
                     <h3>{item.title}</h3>
                     <p>{item.overview}</p>
+                    <p>{item.release_date}</p>
                     <button
                       className="remove-btn"
                       onClick={() => dispatch(removeFromWatchList(item))}
