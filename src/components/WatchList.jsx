@@ -45,7 +45,7 @@ function WatchList() {
                   </div>
                   <div className="overview">
                     <h3>{item.title}</h3>
-                    <p>{item.overview}</p>
+                    <p>{item.overview.slice(0, 300)}</p>
                     <p>{item.release_date}</p>
                     <button
                       className="remove-btn"
