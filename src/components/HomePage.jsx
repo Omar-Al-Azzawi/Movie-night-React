@@ -66,15 +66,16 @@ function HomePage() {
               <Link to="/watch">
                 <h2>
                   Watch list{" "}
-                  <span
-                    className="watch-list-counter"
-                    style={{
-                      color:
-                        watchList.watchList.length % 2 === 0 ? "red" : "green",
-                    }}
-                  >
-                    {watchList.watchList.length}
-                  </span>
+                  {watchList.watchList.length > 0 ? (
+                    <span
+                      className="watch-list-counter"
+                      style={{
+                        color: "salmon",
+                      }}
+                    >
+                      {watchList.watchList.length}
+                    </span>
+                  ) : null}
                 </h2>
               </Link>
             </span>
