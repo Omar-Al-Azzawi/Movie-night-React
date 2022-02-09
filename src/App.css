@@ -147,7 +147,7 @@ h2:hover {
   color: red;
 }
 .header {
-  height: 20vh;
+  /* height: 20vh; */
 }
 .header h1 {
   color: #f64c72;
@@ -188,8 +188,6 @@ h2:hover {
 @media screen and (max-width: 700px) {
   .header {
     display: flex;
-    height: 30vh;
-    display: flex;
     flex-direction: column;
   }
   .header h1 {
@@ -199,4 +197,32 @@ h2:hover {
     margin-top: 80px;
     width: 80%;
   }
+}
+
+/*  filter container */
+
+.filter-container {
+  margin-left: 50px;
+}
+.filter-container button {
+  background-color: transparent;
+  color: #f64c72;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #f64c72;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+.filter-container button:hover {
+  background-color: #f64c72;
+  color: #fff;
+  box-shadow: inset 0 0 15px #fff;
+  border-radius: 15px;
+}
+.filter-container button:active {
+  background-color: #f64c72;
+  color: #fff;
+  box-shadow: inset 0 0 15px #fff;
+  border-radius: 15px;
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import Movies from "./Movies";
+import Filter from "./Filter";
 
 import { GiPopcorn } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -13,6 +14,8 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${process
 function HomePage() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [filtered, setFiltered] = useState([]);
+  const [active, setActive] = useState(0);
 
   const watchList = useSelector((state) => state.watch);
 
@@ -21,6 +24,7 @@ function HomePage() {
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
+        setFiltered(data.results);
       });
   }, []);
 
@@ -79,6 +83,14 @@ function HomePage() {
                 </h2>
               </Link>
             </span>
+            <div>
+              <Filter
+                movies={movies}
+                setFiltered={setFiltered}
+                active={active}
+                setActive={setActive}
+              />
+            </div>
           </form>
         </div>
       </header>
